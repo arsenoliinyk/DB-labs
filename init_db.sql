@@ -52,6 +52,7 @@ CREATE TABLE family_value (
     estimated_cost DECIMAL(10,2) UNSIGNED,
     max_cost DECIMAL(10,2) UNSIGNED,
     min_cost DECIMAL(10,2) UNSIGNED,
+    code_in_catalog_of_value VARCHAR(100),
     
     CONSTRAINT family_value_pk PRIMARY KEY (id)
 );

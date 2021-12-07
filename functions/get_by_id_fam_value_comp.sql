@@ -1,7 +1,8 @@
 USE Oliinyk_7_63;
 
-DELIMITER //
 DROP FUNCTION IF EXISTS get_by_id_fam_value_comp;
+
+DELIMITER //
 CREATE FUNCTION get_by_id_fam_value_comp(
 	name_surname_id INT
 )

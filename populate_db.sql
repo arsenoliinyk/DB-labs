@@ -1,5 +1,7 @@
 USE Oliinyk_7_63;
 
+SET SQL_SAFE_UPDATES=0;
+
 CALL clear_tables();
 
 CALL insert_into_family_companion("Anna", "Bekker", "1952-05-09", "2008-06-07", "v.Zarudtsi", 
@@ -26,16 +28,16 @@ CALL insert_into_family_tree("Stepan", "Bekker", "2005-05-15", null, "v.Zarudtsi
 CALL insert_into_family_tree("Matviy", "Bekker", "2011-11-23", null, "c.Lviv", null, null, 9, 'M', 5);
 CALL insert_into_family_tree("Ira", "Bekker", "2015-02-14", null, "c.Lviv", null, null, 10, 'F', 5);
 
-CALL insert_into_family_value("value1", "20", "25", "15");
-CALL insert_into_family_value("value2", "25", "35", "13");
-CALL insert_into_family_value("value3", "17", "23", "12");
-CALL insert_into_family_value("value4", "11", "30", "7");
-CALL insert_into_family_value("value5", "42", "78", "33");
-CALL insert_into_family_value("value6", "56", "103", "42");
-CALL insert_into_family_value("value7", "8", "12", "5");
-CALL insert_into_family_value("value8", "32", "54", "28");
-CALL insert_into_family_value("value9", "150", "173", "92");
-CALL insert_into_family_value("value10", "228", "341", "157");
+CALL insert_into_family_value("value1", "20", "25", "15","A64524fA");
+CALL insert_into_family_value("value2", "25", "35", "13","M75368hh");
+CALL insert_into_family_value("value3", "17", "23", "12","Z07637Ma");
+CALL insert_into_family_value("value4", "11", "30", "7","A84926DD");
+CALL insert_into_family_value("value5", "42", "78", "33","M84073kr");
+CALL insert_into_family_value("value6", "56", "103", "42","Z63996SC");
+CALL insert_into_family_value("value7", "8", "12", "5","A44742lm");
+CALL insert_into_family_value("value8", "32", "54", "28","M28621dr");
+CALL insert_into_family_value("value9", "150", "173", "92","Z58853QF");
+CALL insert_into_family_value("value10", "228", "341", "157","A38052aF");
 
 INSERT INTO family_tree_has_family_value(family_tree_id, family_value_id)
 VALUES (5, 1), (2,7), (2,1), (2,4), (3,5), (6,1), (7,4), (10,1), (9,8), (8,4);

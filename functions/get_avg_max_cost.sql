@@ -1,11 +1,15 @@
 USE Oliinyk_7_63;
 
+SET GLOBAL log_bin_trust_function_creators = 1;
+
+DROP FUNCTION IF EXISTS get_avg_max_cost;
+
 DELIMITER //
-DROP FUNCTION IF EXISTS get_avg_overall_rating;
-CREATE FUNCTION get_avg_overall_rating()
+CREATE FUNCTION get_avg_max_cost()
 RETURNS DECIMAL
 BEGIN
 	return(SELECT AVG(max_cost) FROM family_value);
 END;
-SELECT * FROM family_value WHERE max_cost < get_avg_overall_rating()//
 DELIMITER ;
+
+SELECT * FROM family_value WHERE max_cost < get_avg_max_cost();

@@ -39,7 +39,7 @@ CREATE TRIGGER before_family_companion_update_check_death_date
 BEFORE UPDATE
 ON family_companion FOR EACH ROW
 BEGIN 
-	IF (new.birth_death IS NOT NULL) AND (new.birth_death > CURDATE()) THEN
+	IF (new.death_date IS NOT NULL) AND (new.death_date > CURDATE()) THEN
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = "Value error. Wrong birth_date";
 	END IF;
